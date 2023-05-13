@@ -9,13 +9,13 @@ greedy:
 brute force:
     https://www.youtube.com/watch?v=AlZCx_deNgs
 
+Dynamic Programming:
+--------------------
+https://www.youtube.com/watch?v=5dRGRueKU3M&list=PLJULIlvhz0rE83NKhnq7acXYIeA0o1dXb&index=1
+
 0/1 Knapsack Problem:
 ---------------------
 https://www.youtube.com/watch?v=LveF2qwHrqU
 https://www.youtube.com/watch?v=5dRGRueKU3M&list=PLJULIlvhz0rE83NKhnq7acXYIeA0o1dXb&index=1
 https://youtu.be/nLmhmB6NzcM
-
-
-Dynamic Programming:
---------------------
-https://www.youtube.com/watch?v=5dRGRueKU3M&list=PLJULIlvhz0rE83NKhnq7acXYIeA0o1dXb&index=1
+https://youtu.be/zRza99HPvkQ
