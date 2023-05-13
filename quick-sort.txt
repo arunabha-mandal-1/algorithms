@@ -1,0 +1,26 @@
+partition(array, low, high):
+    pivot=array[low]
+    i=low+1
+    j=high
+    while i<j
+        while array[i]<=pivot
+            i=i+1
+        while array[j]>pivot
+            j=j-1
+        if i<j
+            swap(array[i], array[j])
+    
+    swap(array[low], array[j])
+    return j
+
+quicksort(array, low, high):
+    if low<high
+        partitionIndex=partition(array, low, high)
+        quicksort(array, low, partitionIndex-1)
+        quicksort(array, partitionIndex+1, high)
+
+Time complexity:
+---------------
+    Best : Ω(nlog(n))	
+    Average : θ(nlog(n))	
+    Worst : O(n^2)	

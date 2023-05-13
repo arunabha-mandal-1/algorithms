@@ -1,0 +1,24 @@
+maxSubarraySum(arr, low, high):
+    if low==high
+        return arr[low]
+
+    mid = (low+high)/2
+    sum = 0
+    left_sum = INT_MIN
+
+    for i=mid to low
+        sum = sum + arr[i]
+        if sum > left_sum
+            left_sum = sum
+
+    sum=0
+    right_sum = INT_MIN
+    for i=mid+1 to high
+        sum = sum + arr[i]
+        if sum > right_sum
+            right_sum = sum
+
+    left_right_max = max(maxSubarraySum(arr, low, mid),
+                        maxSubarraySum(arr, mid+1, high));
+
+    return max(left_sum + right_sum, left_right_max)

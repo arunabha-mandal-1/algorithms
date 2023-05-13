@@ -1,0 +1,27 @@
+Many useful algorithms are recursive in structure: to solve a given problem, they call themselves recursively one or more times to deal with closely related subproblems.
+These algorithms typically follow a divide-and-conquer approach: they break the problem into several subproblems that are similar to the original problem but in smaller size,
+solve the subproblems recursively, and then combine these solutions to create a solution to the original problem.
+
+The divide-and-conquer paradigm involves three steps at each level of the recursion:
+    Divide the problem into a number of subproblems that are smaller instances of the same problem.
+    Conquer the subproblems by solving by solving them recursively. If the subproblem sizes are small enough, however, just solve the subproblems in a striaghtforward manner.
+    Combine the solutions to the subproblems into the solution for the original problem.
+
+Example:
+--------
+Merge sort algorithm closely follows the divide-and-conquer paradigm. Intuitively, it operates as follows.
+    Divide: Divide the n-element sequence to be sorted into two subsequences of n/2 elements each.
+    Conquer: Sort the two subsequences recursively using merge sort.
+    Combine: Merge the two sorted subsequences to produce the sorted answer.
+
+Advantages of Divide and Conquer –
+-----------------------------------
+Solving difficult problems: It is a powerful method for solving difficult problems. Dividing the problem into subproblems so that subproblems can be combined again is a major difficulty in designing a new algorithm. For many such problem this algorithm provides a simple solution.
+
+Parallelism: Since it allows us to solve the subprblems independently, this allows for execution in multi-processor machines, especially shared-memory systems where the communication of data between processors does not need to be planned in advance, because different subproblems can be executed on different processors.
+
+Memory access: It naturally tend to make efficient use of memory caches. This is because once a subproblem is small, all its subproblems can be solved within the cache, without accessing the slower main memory.
+
+Disadvantages of Divide and Conquer –
+--------------------------------------
+One disadvantage of this approach is that recursion is slow. This is beacause of the overhead of the repeated subproblem calls. Also the algorithm need stack for storing the calls. Actually this depends upon the implementation style. With large enough recursive base cases , the overhead of recursion can become negligible for many problems.

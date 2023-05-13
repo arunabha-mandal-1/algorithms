@@ -1,0 +1,34 @@
+merge(array, low, high, mid)
+        set i=low, j=mid+1, k=0
+        allocate space for an auxiliaryay say 'auxarr'
+        while i<=mid and j<=high
+            if[i]<array[j]
+                auxarr[k]=array[i]
+                i=i+1
+                k=k+1
+            else
+                auxarr[k]=array[j]
+                j=j+1
+                k=k+1
+        while i<=mid
+            auxarr[k]=array[i]
+            i=i+1
+            k=k+1
+        while j<=high
+            auxarr[k]=array[j]
+            j=j+1
+            k=k+1
+        copy all the elements from 'auxarray' to one by one in the place of existing ones
+
+mergesort(array, low, high):
+    if low<high
+        mid=low+(high-low)/2
+        mergesort(array, low, mid)
+        mergesort(array, mid+1, high)
+        merge(array, low, high, mid)
+
+Time complexity:
+---------------
+    Best : Ω(nlog(n))	
+    Average : θ(nlog(n))	
+    Worst : O(nlog(n))		

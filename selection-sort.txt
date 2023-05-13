@@ -1,0 +1,15 @@
+selectionsort(array, size):
+    for i=0 to size-2
+        minIndex=i
+        for j=i+1 to size-1
+            if array[j]<array[minIndex]
+                minIndex=j
+        
+        if minIndex is not equal to i
+            swap(array[minIndex], array[i])
+
+Time complexity:
+---------------
+    Best : Ω(n^2)	
+    Average : θ(n^2)	
+    Worst : O(n^2)

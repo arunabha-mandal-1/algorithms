@@ -1,0 +1,24 @@
+bubblesort(array, size):
+    for i=0 to size-2
+        for j=0 to size-i-2
+            if array[j]>array[j+1]
+                swap(array[j], array[j+1])
+
+ADAPTIVE bubble sort:
+---------------------
+bubblesortAdaptive(array, size):
+    isSorted=0
+    for i=0 to size-2
+        isSorted=1
+        for j=0 to size-i-2
+            if array[j]>array[j+1]
+                swap(array[j], array[j+1])
+                isSorted=0
+        if isSorted is equal to 1
+            exit
+
+Time complexity:
+---------------
+    Best : Ω(n)	
+    Average : θ(n^2)	
+    Worst : O(n^2)	
